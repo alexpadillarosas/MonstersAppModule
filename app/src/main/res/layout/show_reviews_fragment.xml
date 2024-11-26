@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".monster.reviews.ShowReviewsFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/monsterReviewImageFilterView"
+                android:layout_width="0dp"
+                android:layout_height="107dp"
+
+                android:background="?attr/colorPrimary"
+                android:scaleType="fitStart"
+                android:src="@drawable/monster_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:roundPercent="0" />
+
+            <TextView
+                android:id="@+id/monsterNameReviewHeaderTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Candy"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="@+id/monsterReviewImageFilterView" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Customer Reviews"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/monsterReviewImageFilterView" />
+
+            <RatingBar
+                android:id="@+id/averageStarsReviewsRatingBar"
+                style="@android:style/Widget.Material.RatingBar.Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:progressBackgroundTint="@color/material_on_primary_emphasis_high_type"
+                android:progressTint="@color/material_on_primary_emphasis_high_type"
+                android:rating="2.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/monsterNameReviewHeaderTextView"
+                app:layout_constraintTop_toBottomOf="@+id/monsterNameReviewHeaderTextView" />
+
+            <TextView
+                android:id="@+id/averageStarsReviewsTextView"
+                android:layout_width="63dp"
+                android:layout_height="21dp"
+                android:layout_marginEnd="4dp"
+                android:text="2.5"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintEnd_toStartOf="@+id/textView13"
+                app:layout_constraintStart_toStartOf="@+id/averageStarsReviewsRatingBar"
+                app:layout_constraintTop_toBottomOf="@+id/averageStarsReviewsRatingBar" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="104dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="4dp"
+                android:text="out of  5"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                app:layout_constraintBottom_toBottomOf="@+id/averageStarsReviewsTextView"
+                app:layout_constraintEnd_toEndOf="@+id/averageStarsReviewsRatingBar"
+                app:layout_constraintStart_toEndOf="@+id/averageStarsReviewsTextView"
+                app:layout_constraintTop_toTopOf="@+id/averageStarsReviewsTextView" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.30" />
+
+            <TextView
+                android:id="@+id/totalVoltesReviewsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="218"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView7"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerInsetEnd="0dp"
+        app:dividerInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reviewsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".monster.review.ReviewMonsterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/monsterReviewImageFilterView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="?attr/colorPrimary"
+                android:src="@drawable/monster_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:roundPercent="1" />
+
+
+            <TextView
+                android:id="@+id/userNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Admin Admin"
+                android:textAlignment="viewStart"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/monsterReviewImageFilterView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/reviewedOnLabelTextView"
+                android:layout_width="87dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Reviewed on: "
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/monsterReviewImageFilterView"
+                app:layout_constraintTop_toBottomOf="@+id/userNameTextView" />
+
+            <TextView
+                android:id="@+id/reviewedOnTextView"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="TextView"
+                android:textAlignment="viewStart"
+                app:layout_constraintBottom_toBottomOf="@+id/reviewedOnLabelTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/reviewedOnLabelTextView"
+                app:layout_constraintTop_toTopOf="@+id/reviewedOnLabelTextView" />
+
+
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDivider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:dividerInsetEnd="16dp"
+                app:dividerInsetStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/monsterReviewImageFilterView" />
+
+            <TextView
+                android:id="@+id/monsterNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="8dp"
+                android:text="Monster's name"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="What is your rate?"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/monsterNameTextView" />
+
+            <RatingBar
+                android:id="@+id/monsterRateReviewRatingBar"
+                style="@android:style/Widget.Material.RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Title"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/monsterRateReviewRatingBar" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleReviewTIL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="write a summative title" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Your Comment"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleReviewTIL" />
+
+            <EditText
+                android:id="@+id/reviewEditTextTextMultiLine"
+                android:layout_width="0dp"
+                android:layout_height="141dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                android:textAlignment="viewStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <Button
+                android:id="@+id/submitReviewButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="Submit Review"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cancelReviewButton"
+                app:layout_constraintTop_toBottomOf="@+id/reviewEditTextTextMultiLine" />
+
+            <Button
+                android:id="@+id/cancelReviewButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:text="Cancel"
+                app:layout_constraintEnd_toStartOf="@+id/submitReviewButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/submitReviewButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

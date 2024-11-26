@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.monstersappmodule8.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_showMonstersFragment"
+            app:destination="@id/showMonstersFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showMonstersFragment"
+        android:name="com.example.monstersappmodule8.monster.show.ShowMonstersFragment"
+        android:label="show_monsters_fragment"
+        tools:layout="@layout/show_monsters_fragment" >
+        <action
+            android:id="@+id/action_showMonstersFragment_to_addMonsterFragment"
+            app:destination="@id/addMonsterFragment" />
+        <action
+            android:id="@+id/action_showMonstersFragment_to_reviewMonsterFragment"
+            app:destination="@id/reviewMonsterFragment" />
+        <action
+            android:id="@+id/action_showMonstersFragment_to_showReviewsFragment"
+            app:destination="@id/showReviewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMonsterFragment"
+        android:name="com.example.monstersappmodule8.monster.add.AddMonsterFragment"
+        android:label="add_monster_fragment"
+        tools:layout="@layout/add_monster_fragment" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.monstersappmodule8.login.SignUpFragment"
+        android:label="sign_up_fragment"
+        tools:layout="@layout/sign_up_fragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_showMonstersFragment"
+            app:destination="@id/showMonstersFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewMonsterFragment"
+        android:name="com.example.monstersappmodule8.monster.review.ReviewMonsterFragment"
+        android:label="review_monster_fragment"
+        tools:layout="@layout/review_monster_fragment" />
+    <fragment
+        android:id="@+id/showReviewsFragment"
+        android:name="com.example.monstersappmodule8.monster.reviews.ShowReviewsFragment"
+        android:label="show_reviews_fragment"
+        tools:layout="@layout/show_reviews_fragment" />
+</navigation>
